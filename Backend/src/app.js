@@ -4,8 +4,12 @@ const cors = require('cors')
 
 const app = express()
 
-app.use(cors())
-
+app.use(cors({
+    origin: "https://codereview-d0f3.onrender.com",
+    methods: ["GET", "POST"],
+    credentials: true
+  }));
+  
 
 app.use(express.json())
 
