@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Editor from "react-simple-code-editor";
-import Prism from "prismjs";
+import Prism from "prismjs/components/prism-core";
 import "prismjs/themes/prism-tomorrow.css";
 import Markdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
