@@ -13,13 +13,13 @@ const App = () => {
   const [review, setReview] = useState("");
 
   useEffect(() => {
-    import("prismjs/components/prism-javascript").then(() => {
-      Prism.highlightAll();
+    import("prismjs").then((Prism) => {
+      import("prismjs/components/prism-javascript").then(() => {
+        Prism.highlightAll();
+      });
     });
   }, []);
   
-  
-
   const reviewCode = async () => {
     try {
       const response = await axios.post("https://codereview-d0f3.onrender.com/ai/get-review", {
