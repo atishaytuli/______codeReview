@@ -5,8 +5,9 @@ const cors = require('cors')
 const app = express()
 
 app.use(cors({
-    origin: "https://bestcodereview.vercel.app/",
-    methods: ["GET", "POST"],
+    origin: "https://bestcodereview.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
   }));
   
