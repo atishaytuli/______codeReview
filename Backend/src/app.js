@@ -5,7 +5,7 @@ const cors = require('cors')
 const app = express()
 
 app.use(cors({
-    origin: "https://codereview-d0f3.onrender.com",
+    origin: "https://bestcodereview.vercel.app/",
     methods: ["GET", "POST"],
     credentials: true
   }));
