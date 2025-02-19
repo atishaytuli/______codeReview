@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Editor from "react-simple-code-editor";
-import Prism from "prismjs/components/prism-core";
+import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.css";
 import Markdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
@@ -13,8 +13,11 @@ const App = () => {
   const [review, setReview] = useState("");
 
   useEffect(() => {
-    Prism.highlightAll();
+    import("prismjs/components/prism-javascript").then(() => {
+      Prism.highlightAll();
+    });
   }, []);
+  
   
 
   const reviewCode = async () => {
