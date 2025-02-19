@@ -15,6 +15,7 @@ const App = () => {
   useEffect(() => {
     Prism.highlightAll();
   }, []);
+  
 
   const reviewCode = async () => {
     try {
